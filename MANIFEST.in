@@ -1,0 +1,6 @@
+include LICENSE
+include MANIFEST.in
+include *.md
+graft playground_pyall
+global-exclude __pycache__
+global-exclude *.py[co]
