@@ -1,3 +1,3 @@
 # Playground pyall
 
-Lets try: https://playground-pyall.hakancelik.com
+Lets try: https://playground-pyall.hakancelik.dev
