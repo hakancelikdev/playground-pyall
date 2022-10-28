@@ -61,16 +61,10 @@ source_editor = pn.widgets.Ace(value=example_source_code, language="python")
 result_editor = pn.bind(run_refactor, source_editor)
 
 
-docs_button = pn.widgets.Button(
-    name="Go to docs", button_type="primary", width=100
-)
+docs_button = pn.widgets.Button(name="Go to docs", button_type="primary", width=100)
 docs_button.js_on_click(code="window.open('https://pyall.hakancelik.dev')")
-github_button = pn.widgets.Button(
-    name="GitHub", button_type="primary", width=100
-)
-github_button.js_on_click(
-    code="window.open('https://github.com/hakancelikdev/pyall')"
-)
+github_button = pn.widgets.Button(name="GitHub", button_type="primary", width=100)
+github_button.js_on_click(code="window.open('https://github.com/hakancelikdev/pyall')")
 
 app_row = pn.Row(source_editor, result_editor)
 
