@@ -1,6 +1,6 @@
 include LICENSE
 include MANIFEST.in
 include *.md
-graft playground_pyall
+graft playground_unexport
 global-exclude __pycache__
 global-exclude *.py[co]

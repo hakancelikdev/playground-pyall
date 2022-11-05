@@ -1,8 +1,8 @@
 import traceback
 
 import panel as pn
-from pyall.analyzer import Analyzer
-from pyall.refactor import refactor_source
+from unexport.analyzer import Analyzer
+from unexport.refactor import refactor_source
 
 
 def refactor(source: str) -> str:
@@ -62,13 +62,13 @@ result_editor = pn.bind(run_refactor, source_editor)
 
 
 docs_button = pn.widgets.Button(name="Go to docs", button_type="primary", width=100)
-docs_button.js_on_click(code="window.open('https://pyall.hakancelik.dev')")
+docs_button.js_on_click(code="window.open('https://unexport.hakancelik.dev')")
 github_button = pn.widgets.Button(name="GitHub", button_type="primary", width=100)
-github_button.js_on_click(code="window.open('https://github.com/hakancelikdev/pyall')")
+github_button.js_on_click(code="window.open('https://github.com/hakancelikdev/unexport')")
 
 app_row = pn.Row(source_editor, result_editor)
 
-bootstrap = pn.template.MaterialTemplate(title="Try Pyall")
+bootstrap = pn.template.MaterialTemplate(title="Try unexport")
 bootstrap.header.append(pn.Row(docs_button, github_button))
 bootstrap.main.append(app_row)
 bootstrap.servable()
